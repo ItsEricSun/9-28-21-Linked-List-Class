@@ -15,7 +15,7 @@ class LinkedList<E> {
         }
     }
     
-    public LinkedList insert(LinkedList list, E data){
+    public LinkedList add(LinkedList list, E data){
         // Create a new node with given data
         Node new_node = new Node(data);
         new_node.next = null;
@@ -91,10 +91,10 @@ class LinkedList<E> {
     
     public static void main(String[] args) {
 		LinkedList<String> l = new LinkedList<>();
-		l.insert(l, "A");
-		l.insert(l, "D");
-		l.insert(l, "C");
-		l.insert(l, "B");
+		l.add(l, "A");
+		l.add(l, "D");
+		l.add(l, "C");
+		l.add(l, "B");
 		l.printList(l);
 		l.size(l);
 		l.remove(l, 1);
