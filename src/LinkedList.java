@@ -42,11 +42,9 @@ class LinkedList<E> {
     }
     
     public LinkedList remove(LinkedList list, int index){
-        // Create a new node with given data
     	if(list.head == null) {
     		System.out.println("List Empty");
     	}
-
     	Node current = list.head;
     	if(index == 0) {
     		list.head = current.next;
@@ -61,7 +59,7 @@ class LinkedList<E> {
     		current = current.next;
     		i++;
     	}
-    	System.out.print("Index Out of Bounds");
+    	System.out.print("\nIndex Out of Bounds");
     	return list;
     }
     
@@ -87,7 +85,7 @@ class LinkedList<E> {
             currNode = currNode.next;
             i++;
         }
-        System.out.println("\nSize: " + i);
+        System.out.print("\nSize: " + i);
         return i;
     }
     
@@ -99,8 +97,7 @@ class LinkedList<E> {
 		l.insert(l, "B");
 		l.printList(l);
 		l.size(l);
-//		System.out.println("");
-		l.remove(l, 2);
+		l.remove(l, 1);
 
 		l.printList(l);
 		l.size(l);
