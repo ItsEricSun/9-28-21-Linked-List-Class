@@ -61,14 +61,14 @@ class LinkedList<E> {
     		current = current.next;
     		i++;
     	}
-    	System.out.println("Index Out of Bounds");
+    	System.out.print("Index Out of Bounds");
     	return list;
     }
     
     public void printList(LinkedList list){
         Node currNode = list.head;
    
-        System.out.print("LinkedList: ");
+        System.out.print("\nLinkedList: ");
    
         // Traverse through the LinkedList
         while (currNode != null) {
@@ -80,6 +80,17 @@ class LinkedList<E> {
         }
     }
     
+    public int size(LinkedList list){
+        Node currNode = list.head;
+        int i = 0;
+        while (currNode != null) {
+            currNode = currNode.next;
+            i++;
+        }
+        System.out.println("\nSize: " + i);
+        return i;
+    }
+    
     public static void main(String[] args) {
 		LinkedList<String> l = new LinkedList<>();
 		l.insert(l, "A");
@@ -87,10 +98,12 @@ class LinkedList<E> {
 		l.insert(l, "C");
 		l.insert(l, "B");
 		l.printList(l);
-		System.out.println("");
-		l.remove(l, -1);
+		l.size(l);
+//		System.out.println("");
+		l.remove(l, 2);
 
 		l.printList(l);
+		l.size(l);
 	}
 
 
