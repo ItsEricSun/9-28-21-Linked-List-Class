@@ -59,6 +59,8 @@ class LinkedList<E> {
     public static void main(String[] args) {
 		LinkedList<String> l = new LinkedList<>();
 		l.insert(l, "A");
+		l.insert(l, "D");
+		l.insert(l, "C");
 		l.insert(l, "B");
 		l.printList(l);
 		
